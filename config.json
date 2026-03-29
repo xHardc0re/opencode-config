@@ -1,30 +1,36 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "theme": "gruvbox",
-  "permission": {
-    "read": "allow",
-    "edit": "allow",
-    "grep": "allow",
-    "glob": "allow",
-    "list": "allow",
-    "bash": "ask",
-    "webfetch": "allow"
-  },
-  "model": "ollama/qwen3:4b",
-  "provider": {
-    "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama",
-      "options": {
-        "baseURL": "http://127.0.0.1:11434/v1"
-      },
-      "models": {
-        "qwen3:4b": {
-          "name": "qwen3:4b",
-          "reasoning": true,
-          "tools": true
+    "$schema": "https://opencode.ai/config.json",
+    "theme": "gruvbox",
+    "permission": {
+        "read": "allow",
+        "edit": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "list": "allow",
+        "bash": "ask",
+        "webfetch": "allow"
+    },
+    "mcp": {
+        "chrome-devtools": {
+            "type": "local",
+            "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
         }
-      }
+    },
+    "model": "ollama/qwen3:4b",
+    "provider": {
+        "ollama": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Ollama",
+            "options": {
+                "baseURL": "http://127.0.0.1:11434/v1"
+            },
+            "models": {
+                "qwen3:4b": {
+                    "name": "qwen3:4b",
+                    "reasoning": true,
+                    "tools": true
+                }
+            }
+        }
     }
-  }
 }
