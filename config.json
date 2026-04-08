@@ -22,13 +22,18 @@
             "npm": "@ai-sdk/openai-compatible",
             "name": "Ollama",
             "options": {
-                "baseURL": "http://127.0.0.1:11434/v1"
+                "baseURL": "http://127.0.0.1:11434/v1",
+                "apiKey": "ollama",
+                "timeout": 600000
             },
             "models": {
                 "qwen3:4b": {
                     "name": "qwen3:4b",
                     "reasoning": true,
-                    "tools": true
+                    "tools": true,
+                    "context": 16384,
+                    "stream": true,
+                    "max_tokens": 2048
                 }
             }
         }
